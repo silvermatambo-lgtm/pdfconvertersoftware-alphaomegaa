@@ -14,7 +14,6 @@ export default function PWAInstall() {
     const handler = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      // Show install prompt after a short delay
       setTimeout(() => setVisible(true), 8000);
     };
     window.addEventListener('beforeinstallprompt', handler);
@@ -33,7 +32,6 @@ export default function PWAInstall() {
 
   return (
     <div className="fixed bottom-[80px] left-4 z-40 md:bottom-8 w-72 max-w-[calc(100vw-2rem)] rounded-2xl bg-white shadow-2xl border border-stone-100 overflow-hidden animate-chat-slide">
-      {/* Gold top bar */}
       <div className="h-1 bg-gradient-to-r from-amber-500 to-amber-300" />
 
       <div className="p-4">
@@ -46,10 +44,10 @@ export default function PWAInstall() {
         </button>
 
         <div className="flex items-center gap-3 mb-3">
-          <img src="https://i.imgur.com/HBY0SWU.png" alt="App icon" className="w-12 h-12 object-contain rounded-xl border border-stone-100 p-1" />
+          <img src="/logo.jpg" alt="Alpha and Omega Advisors logo" className="w-12 h-12 object-contain rounded-xl border border-stone-100 p-1 bg-white" />
           <div>
-            <p className="font-bold text-stone-800 text-sm leading-tight">Granite Installations</p>
-            <p className="text-amber-500 text-xs">Premium Stone Solutions</p>
+            <p className="font-bold text-stone-800 text-sm leading-tight">Alpha and Omega</p>
+            <p className="text-amber-500 text-xs">Advisors</p>
           </div>
         </div>
 
