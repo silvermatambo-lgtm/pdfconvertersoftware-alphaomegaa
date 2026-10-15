@@ -12,7 +12,6 @@ export default function Footer() {
     <footer className="bg-navy-900 text-slate-300">
       <div className="max-w-7xl mx-auto px-4 pt-16 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img src="/logo.jpg" alt="Alpha and Omega Advisors" className="h-14 w-14 object-contain rounded bg-white p-0.5" />
@@ -25,68 +24,37 @@ export default function Footer() {
               Professional Accountants and Tax Advisors. Expert guidance for businesses and individuals, plus free PDF tools.
             </p>
             <div className="flex items-center gap-3">
-              <a href="https://wa.me/27000000000" aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-green-600 flex items-center justify-center transition-colors">
-                <WA_ICON />
-              </a>
+              <a href="https://wa.me/27000000000" aria-label="WhatsApp" className="w-9 h-9 rounded-full bg-navy-800 hover:bg-green-600 flex items-center justify-center transition-colors"><WA_ICON /></a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-navy-700">Quick Links</h4>
             <ul className="space-y-2">
               {[
-                ['Home', '/'],
-                ['About Us', '/about'],
-                ['Services', '/services'],
-                ['PDF Editor', '/pdf-editor'],
-                ['FAQ', '/faq'],
-                ['Testimonials', '/testimonials'],
-                ['Contact', '/contact'],
+                ['Home', '/'], ['About Us', '/about'], ['Services', '/services'], ['PDF Editor', '/pdf-editor'],
+                ['FAQ', '/faq'], ['Testimonials', '/testimonials'], ['Contact', '/contact'],
               ].map(([label, to]) => (
-                <li key={to}>
-                  <Link to={to} className="text-slate-400 hover:text-gold-400 text-sm transition-colors flex items-center gap-2 group">
-                    <span className="w-1 h-1 rounded-full bg-gold-500 group-hover:w-2 transition-all duration-200" />
-                    {label}
-                  </Link>
-                </li>
+                <li key={to}><Link to={to} className="text-slate-400 hover:text-gold-400 text-sm transition-colors flex items-center gap-2 group"><span className="w-1 h-1 rounded-full bg-gold-500 group-hover:w-2 transition-all duration-200" />{label}</Link></li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-navy-700">Our Services</h4>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li>Bookkeeping & Accounting</li>
-              <li>Tax Returns & Planning</li>
-              <li>VAT & PAYE Compliance</li>
-              <li>Company Registration</li>
-              <li>Financial Statements</li>
-              <li>PDF Editor & CSV Tools</li>
+              <li>Bookkeeping &amp; Accounting</li><li>Tax Returns &amp; Planning</li><li>VAT &amp; PAYE Compliance</li>
+              <li>Company Registration</li><li>Financial Statements</li><li>PDF Editor &amp; CSV Tools</li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-navy-700">Contact</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-3">
-                <Phone size={16} className="text-gold-400 mt-0.5 shrink-0" />
-                <a href="tel:+27000000000" className="text-slate-400 hover:text-gold-400">+27 00 000 0000</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={16} className="text-gold-400 mt-0.5 shrink-0" />
-                <a href="mailto:info@alphaomegaadvisors.co.za" className="text-slate-400 hover:text-gold-400">info@alphaomegaadvisors.co.za</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-gold-400 mt-0.5 shrink-0" />
-                <span className="text-slate-400">South Africa</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock size={16} className="text-gold-400 mt-0.5 shrink-0" />
-                <span className="text-slate-400">Mon – Fri: 08:00 – 17:00</span>
-              </li>
+              <li className="flex items-start gap-3"><Phone size={16} className="text-gold-400 mt-0.5 shrink-0" /><a href="tel:+27000000000" className="text-slate-400 hover:text-gold-400">+27 00 000 0000</a></li>
+              <li className="flex items-start gap-3"><Mail size={16} className="text-gold-400 mt-0.5 shrink-0" /><a href="mailto:info@alphaomegaadvisors.co.za" className="text-slate-400 hover:text-gold-400">info@alphaomegaadvisors.co.za</a></li>
+              <li className="flex items-start gap-3"><MapPin size={16} className="text-gold-400 mt-0.5 shrink-0" /><span className="text-slate-400">South Africa</span></li>
+              <li className="flex items-start gap-3"><Clock size={16} className="text-gold-400 mt-0.5 shrink-0" /><span className="text-slate-400">Mon – Fri: 08:00 – 17:00</span></li>
             </ul>
           </div>
         </div>
@@ -95,7 +63,7 @@ export default function Footer() {
       <div className="border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Alpha and Omega Advisors. All rights reserved.</p>
-          <p>Professional Accountants and Tax Advisors</p>
+          <p>Website designed by <a href="https://www.webdevpro.co.za" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors">www.WebDevPro.co.za</a> | <a href="tel:+27812159792" className="hover:text-gold-400 transition-colors">+27 81 215 9792</a> | <a href="mailto:support@webdevpro.co.za" className="hover:text-gold-400 transition-colors">support@webdevpro.co.za</a></p>
         </div>
       </div>
     </footer>
